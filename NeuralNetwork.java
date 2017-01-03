@@ -22,7 +22,7 @@ public class NeuralNetwork {
         inputLayer = layers.get(0);
 
         //Outpur layer is the last layer
-        outputLayer = layers.get(layer.getSize());
+        outputLayer = layers.get(layer.getSize()-1);
     }
 
     //The layer is a added at the end
@@ -41,11 +41,11 @@ public Layer createWeights(Layer layer, int numberWeights) {
         for (int i = 0; i < weights.length; ++i) {
             weights[i] = weightsGanarate.nextDouble();
         }
-        
-        
+   
+        /*
         weights[0] = 1;
         weights[1] = 1;
-        weights[2] = 1;
+        weights[2] = 1;*/
 
           
         for (int i = 0; i < layer.getNeurons().length; ++i) {
